@@ -382,7 +382,7 @@ def main() :
     sfp.write("\n")
     sfp.write(runScript2)
     sfp.close()
-    os.chmod(scriptFile, 0755)
+    os.chmod(scriptFile, 0o755)
 
     notefp = sys.stdout
     notefp.write("""

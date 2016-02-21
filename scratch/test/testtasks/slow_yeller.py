@@ -4,7 +4,7 @@ import os,sys,time
 import datetime
 
 if len(sys.argv) != 2 :
-    print "usage $0 arg"
+    print("usage $0 arg")
     sys.exit(1)
 
 arg=sys.argv[1]

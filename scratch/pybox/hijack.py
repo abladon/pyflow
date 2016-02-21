@@ -20,6 +20,6 @@ b.inc = a.inc
 
 b.inc()
 
-print "a", a.x
-print "b", b.x
+print("a", a.x)
+print("b", b.x)
 

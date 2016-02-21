@@ -777,7 +777,7 @@ def writeDotScript(taskDotScriptFile,
     """
     import inspect
 
-    dsfp = os.fdopen(os.open(taskDotScriptFile, os.O_WRONLY | os.O_CREAT, 0755), 'w')
+    dsfp = os.fdopen(os.open(taskDotScriptFile, os.O_WRONLY | os.O_CREAT, 0o755), 'w')
 
     dsfp.write("""#!/usr/bin/env python
 #
@@ -3203,7 +3203,7 @@ class WorkflowRunner(object) :
             except KeyboardInterrupt:
                 msg = "Keyboard Interrupt, shutting down running tasks..."
                 self._killWorkflow(msg)
-            except DataDirException, e:
+            except DataDirException as e:
                 self._notify(e.msg,logState=LogState.ERROR)
             except:
                 exceptionMessaging()
